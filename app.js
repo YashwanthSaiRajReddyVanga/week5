@@ -1,11 +1,9 @@
-const express=require('express');
-const app=express();
-const port=3000;
-app.get("/",(req,res)=>{
-    res.send("<h1>hello world</h1>");
-
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+app.get('/', (req, res) => {
+    res.send('Hello, Docker!');
 });
-app.listen(port,()=>{
-    console.log(`app listening to the port $(port)`);
-}
-)
+app.listen(3000, '0.0.0.0', () => {
+    console.log('Server is running on port 3000');
+});
