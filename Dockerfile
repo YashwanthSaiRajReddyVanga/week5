@@ -1,9 +1,9 @@
 
 FROM node:14
-COPY . /usr/src/app/
+COPY /usr/src/app/
 COPY package*.json ./
 RUN npm install 
 COPY . .
 EXPOSE 3000
-CMD ["node", "App.js"]
+CMD ["node", "app.js"]
 
